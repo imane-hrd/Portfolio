@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Portfolio de Imane El Harradji Aoury - Ingeniera Informática especializada en desarrollo de software, arquitectura de sistemas y tecnologías web. Ciudad Real, España.">
+<meta name="keywords" content="Imane El Harradji, Ingeniera Informática, Software Engineer, Desarrollo Web, Java, Python, C++, Ciudad Real, UCLM, Portfolio">
+<meta name="author" content="Imane El Harradji Aoury">
+<meta property="og:title" content="Imane El Harradji Aoury - Software Engineer Portfolio">
+<meta property="og:description" content="Ingeniera Informática especializada en desarrollo de software, arquitectura de sistemas y ciberseguridad.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<title>Imane El Harradji Aoury - Ingeniera Informática | Portfolio</title>
+<link rel="canonical" href="https://imanelharradji.dev">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-main:#f8f9fc;
+  --card-bg:rgba(255,255,255,0.85);
+  --text-primary:#0f172a;
+  --text-secondary:#475569;
+  --accent:#0f4c81;
+  --accent-light:#2563eb;
+  --accent-gradient:linear-gradient(135deg,#0f4c81 0%,#2563eb 100%);
+  --border:rgba(15,76,129,0.12);
+  --shadow-sm:0 2px 8px rgba(15,76,129,0.06);
+  --shadow-md:0 4px 16px rgba(15,76,129,0.1);
+  --shadow-lg:0 8px 32px rgba(15,76,129,0.14);
+}
+
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg-main:#0b1120;
+    --card-bg:rgba(19,30,54,0.75);
+    --text-primary:#f1f5f9;
+    --text-secondary:#94a3b8;
+    --accent:#60a5fa;
+    --accent-light:#93c5fd;
+    --accent-gradient:linear-gradient(135deg,#2563eb 0%,#60a5fa 100%);
+    --border:rgba(96,165,250,0.18);
+    --shadow-sm:0 2px 8px rgba(0,0,0,0.4);
+    --shadow-md:0 4px 16px rgba(0,0,0,0.5);
+    --shadow-lg:0 8px 32px rgba(0,0,0,0.6);
+  }
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Inter,sans-serif;scroll-behavior:smooth}
+body{
+  background:var(--bg-main);
+  color:var(--text-primary);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+  padding:0;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at 20% 30%,rgba(15,76,129,0.06) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(59,130,246,0.05) 0%,transparent 50%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.container{
+  position:relative;
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 24px 80px;
+  z-index:1;
+}
+
+.section{
+  background:var(--card-bg);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:32px;
+  margin-bottom:24px;
+  box-shadow:var(--shadow-sm);
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.section:hover{
+  box-shadow:var(--shadow-md);
+  transform:translateY(-3px);
+}
+
+.header{
+  background:var(--card-bg);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:32px;
+  margin-bottom:24px;
+  box-shadow:var(--shadow-sm);
+  transition:all 0.3s ease;
+  position:relative;
+}
+
+.header:hover{
+  box-shadow:var(--shadow-md);
+}
+
+.header h1{
+  font-family:Rajdhani,sans-serif;
+  font-size:38px;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:8px;
+  letter-spacing:-0.5px;
+}
+
+.header .subtitle{
+  font-size:16px;
+  color:var(--text-secondary);
+  margin-bottom:14px;
+  font-weight:500;
+}
+
+.header .meta{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  font-size:14px;
+  color:var(--text-secondary);
+}
+
+.header .meta span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+
+.header .meta a{
+  color:var(--text-secondary);
+  text-decoration:none;
+  transition:color 0.2s ease;
+}
+
+.header .meta a:hover{
+  color:var(--accent);
+  text-decoration:underline;
+}
+
+.language-switcher{
+  position:absolute;
+  top:24px;
+  right:24px;
+  display:flex;
+  gap:6px;
+  background:rgba(15,76,129,0.06);
+  padding:6px;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+
+.lang-btn{
+  padding:6px 14px;
+  border:none;
+  background:transparent;
+  color:var(--text-secondary);
+  font-size:12px;
+  font-weight:600;
+  border-radius:8px;
+  cursor:pointer;
+  transition:all 0.2s cubic-bezier(0.4,0,0.2,1);
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.lang-btn:hover{
+  background:rgba(15,76,129,0.12);
+  color:var(--accent);
+  transform:translateY(-1px);
+}
+
+.lang-btn.active{
+  background:var(--accent-gradient);
+  color:white;
+  box-shadow:var(--shadow-sm);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 380px;
+  gap:24px;
+  align-items:start;
+}
+
+h2{
+  font-size:24px;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+h3{
+  font-size:20px;
+  font-weight:600;
+  color:var(--accent);
+  margin:32px 0 16px;
+}
+
+h4{
+  font-size:18px;
+  font-weight:600;
+  color:var(--accent);
+  margin-bottom:12px;
+}
+
+p{
+  color:var(--text-secondary);
+  line-height:1.7;
+  margin-bottom:16px;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:16px;
+  margin:24px 0 32px;
+}
+
+.stat-card{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px 14px;
+  text-align:center;
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.stat-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--accent);
+}
+
+.stat-icon{
+  font-size:30px;
+  margin-bottom:8px;
+  transition:all 0.3s ease;
+}
+
+.stat-card:hover .stat-icon{
+  transform:scale(1.15) rotate(4deg);
+}
+
+.stat-number{
+  font-size:34px;
+  font-weight:700;
+  color:var(--accent);
+  font-family:Rajdhani,sans-serif;
+  line-height:1;
+  margin-bottom:6px;
+}
+
+.stat-label{
+  font-size:12px;
+  color:var(--text-secondary);
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+
+.skills{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.skill{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.skill-label{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+  font-size:14px;
+  font-weight:600;
+  color:var(--text-primary);
+}
+
+.skill-level-badge{
+  font-size:11px;
+  padding:2px 8px;
+  border-radius:6px;
+  background:rgba(15,76,129,0.08);
+  color:var(--accent);
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.4px;
+}
+
+.skill-bar{
+  height:8px;
+  background:rgba(15,76,129,0.08);
+  border-radius:8px;
+  overflow:hidden;
+  position:relative;
+}
+
+.skill-bar::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:var(--accent-gradient);
+  width:0;
+  border-radius:8px;
+  transition:width 1.2s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:0 2px 8px rgba(15,76,129,0.25);
+}
+
+.skill-bar.active::before{
+  width:var(--width);
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.project{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  display:flex;
+  flex-direction:column;
+}
+
+.project:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--accent);
+}
+
+.project-img{
+  height:160px;
+  background-size:cover;
+  background-position:center;
+  background-color:#1e293b;
+  position:relative;
+  overflow:hidden;
+}
+
+.project-img::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:var(--accent-gradient);
+  opacity:0.08;
+  transition:opacity 0.3s ease;
+}
+
+.project:hover .project-img::after{
+  opacity:0.18;
+}
+
+.project-body{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.project h4{
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.project p{
+  font-size:13px;
+  margin:0 0 14px;
+  line-height:1.6;
+  flex:1;
+}
+
+.project-tech{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:16px;
+}
+
+.tech-badge{
+  padding:4px 10px;
+  background:rgba(15,76,129,0.08);
+  border:1px solid var(--border);
+  border-radius:6px;
+  font-size:10px;
+  font-weight:700;
+  color:var(--accent);
+}
+
+.project-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:auto;
+}
+
+.project-link{
+  padding:6px 12px;
+  background:rgba(15,76,129,0.06);
+  border:1px solid var(--border);
+  border-radius:8px;
+  font-size:11px;
+  font-weight:600;
+  color:var(--accent);
+  text-decoration:none;
+  transition:all 0.25s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+}
+
+.project-link:hover{
+  background:var(--accent-gradient);
+  color:white;
+  border-color:transparent;
+  transform:translateY(-1px);
+}
+
+.languages-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-top:20px;
+}
+
+.language-card{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:12px;
+  transition:all 0.3s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.language-card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:4px;
+  height:100%;
+  background:var(--accent-gradient);
+  opacity:0;
+  transition:opacity 0.3s ease;
+}
+
+.language-card:hover{
+  transform:translateX(3px);
+  border-color:var(--accent);
+}
+
+.language-card:hover::before{
+  opacity:1;
+}
+
+.lang-flag{
+  font-size:32px;
+  min-width:44px;
+  text-align:center;
+  transition:all 0.3s ease;
+}
+
+.language-card:hover .lang-flag{
+  transform:scale(1.15) rotate(4deg);
+}
+
+.lang-info{
+  flex:1;
+}
+
+.lang-name{
+  font-size:14px;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:2px;
+}
+
+.lang-level{
+  font-size:11px;
+  color:var(--text-secondary);
+  margin-bottom:6px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+
+.lang-progress{
+  height:5px;
+  background:rgba(15,76,129,0.1);
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.lang-progress-bar{
+  height:100%;
+  background:var(--accent-gradient);
+  border-radius:10px;
+  box-shadow:0 0 8px rgba(15,76,129,0.3);
+  transition:width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.certifications{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin-top:16px;
+}
+
+.cert-card{
+  display:flex;
+  gap:14px;
+  padding:16px;
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:14px;
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.cert-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--accent);
+}
+
+.cert-icon{
+  width:48px;
+  height:48px;
+  min-width:48px;
+  background:var(--accent-gradient);
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:white;
+  box-shadow:var(--shadow-sm);
+}
+
+.cert-content{
+  flex:1;
+}
+
+.cert-content h4{
+  font-size:15px;
+  margin:0 0 4px;
+  color:var(--accent);
+}
+
+.cert-org{
+  font-size:12px;
+  color:var(--text-secondary);
+  margin:0 0 2px;
+  font-weight:600;
+}
+
+.cert-date{
+  font-size:11px;
+  color:var(--text-secondary);
+  margin:0 0 8px;
+  opacity:0.85;
+}
+
+.cert-skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+}
+
+.cert-tag{
+  padding:3px 8px;
+  background:rgba(15,76,129,0.08);
+  border:1px solid var(--border);
+  border-radius:5px;
+  font-size:10px;
+  font-weight:600;
+  color:var(--accent);
+  transition:all 0.2s ease;
+}
+
+.cert-card:hover .cert-tag{
+  background:var(--accent-gradient);
+  color:white;
+  border-color:transparent;
+}
+
+.timeline{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:20px;
+}
+
+.timeline-item{
+  display:flex;
+  gap:16px;
+  transition:transform 0.3s ease;
+}
+
+.timeline-item:hover{
+  transform:translateX(4px);
+}
+
+.timeline-line{
+  width:4px;
+  background:var(--accent-gradient);
+  border-radius:4px;
+  flex-shrink:0;
+}
+
+.timeline-content{
+  padding:16px 20px;
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:12px;
+  flex:1;
+  font-size:14px;
+  color:var(--text-secondary);
+  line-height:1.7;
+}
+
+.timeline-content strong{
+  color:var(--accent);
+  font-weight:700;
+}
+
+.terminal{
+  background:linear-gradient(135deg,#161e2e 0%,#0f172a 100%);
+  border:1px solid rgba(59,130,246,0.3);
+  border-radius:16px;
+  padding:18px;
+  font-family:Rajdhani,monospace;
+  font-size:14px;
+  color:#e2e8f0;
+  box-shadow:0 8px 32px rgba(15,76,129,0.35),inset 0 1px 0 rgba(255,255,255,0.1);
+  position:relative;
+  overflow:hidden;
+}
+
+.terminal::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(59,130,246,0.5),transparent);
+  animation:scan 3s linear infinite;
+}
+
+@keyframes scan{
+  0%,100%{opacity:0}
+  50%{opacity:1}
+}
+
+.terminal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:1px solid rgba(59,130,246,0.2);
+}
+
+.terminal-dots{
+  display:flex;
+  gap:8px;
+}
+
+.terminal-dot{
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  transition:all 0.2s ease;
+  cursor:pointer;
+}
+
+.terminal-dot:hover{
+  transform:scale(1.25);
+  box-shadow:0 0 6px currentColor;
+}
+
+.dot-red{background:#ef4444}
+.dot-yellow{background:#f59e0b}
+.dot-green{background:#10b981}
+
+.terminal-title{
+  font-size:12px;
+  color:#94a3b8;
+  font-weight:600;
+  letter-spacing:0.5px;
+}
+
+.terminal-body{
+  min-height:120px;
+  line-height:1.75;
+  font-size:13px;
+  color:#94a3b8;
+}
+
+.terminal-line{
+  display:block;
+  margin:3px 0;
+}
+
+.terminal-prompt{
+  color:#3b82f6;
+  font-weight:700;
+}
+
+.terminal-text{
+  color:#e2e8f0;
+}
+
+.terminal-success{
+  color:#10b981;
+}
+
+.terminal-cursor{
+  display:inline-block;
+  width:8px;
+  height:15px;
+  background:#3b82f6;
+  margin-left:2px;
+  vertical-align:middle;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  0%,49%{opacity:1}
+  50%,100%{opacity:0}
+}
+
+.photo-area{
+  height:200px;
+  border:2px dashed var(--border);
+  border-radius:16px;
+  background:rgba(15,76,129,0.02);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all 0.3s ease;
+  overflow:hidden;
+  position:relative;
+}
+
+.photo-area:hover{
+  border-color:var(--accent);
+  background:rgba(15,76,129,0.05);
+}
+
+.photo-area img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:var(--shadow-md);
+}
+
+.tech-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:16px;
+}
+
+.tech-chip{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  padding:14px 10px;
+  background:rgba(15,76,129,0.04);
+  border:1px solid var(--border);
+  border-radius:14px;
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  cursor:pointer;
+}
+
+.tech-chip:hover{
+  background:var(--accent-gradient);
+  border-color:transparent;
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-sm);
+}
+
+.tech-chip:hover .tech-icon{
+  transform:scale(1.1) rotate(4deg);
+  background:rgba(255,255,255,0.2);
+}
+
+.tech-chip:hover .tech-label{
+  color:white;
+}
+
+.tech-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:rgba(15,76,129,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  transition:all 0.3s ease;
+}
+
+.tech-label{
+  font-size:12px;
+  font-weight:600;
+  color:var(--text-primary);
+  text-align:center;
+  transition:color 0.3s ease;
+}
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 16px;
+  background:rgba(15,76,129,0.04);
+  border:1px solid var(--border);
+  border-radius:10px;
+  color:var(--accent);
+  font-weight:600;
+  font-size:13px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+.btn:hover{
+  background:var(--accent-gradient);
+  color:white;
+  border-color:transparent;
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+
+.btn-primary{
+  background:var(--accent-gradient);
+  color:white;
+  border:none;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:var(--shadow-lg);
+}
+
+.contact-grid{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.footer{
+  text-align:center;
+  padding:32px 0 0;
+  margin-top:40px;
+  color:var(--text-secondary);
+  font-size:14px;
+  border-top:1px solid var(--border);
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(20px);
+  animation:reveal 0.6s ease forwards;
+}
+
+@keyframes reveal{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.reveal:nth-child(1){animation-delay:0.1s}
+.reveal:nth-child(2){animation-delay:0.2s}
+.reveal:nth-child(3){animation-delay:0.3s}
+.reveal:nth-child(4){animation-delay:0.4s}
+.reveal:nth-child(5){animation-delay:0.5s}
+
+@media(max-width:980px){
+  .grid{grid-template-columns:1fr}
+  .header h1{font-size:32px}
+  .language-switcher{
+    position:static;
+    margin-bottom:18px;
+    justify-content:center;
+  }
+  .languages-grid{grid-template-columns:1fr}
+  .projects{grid-template-columns:1fr}
+}
+
+@media(max-width:640px){
+  .container{
+    padding:16px 12px 48px;
+  }
+  .header{
+    padding:22px 16px;
+    border-radius:16px;
+    margin-bottom:16px;
+  }
+  .header h1{
+    font-size:26px;
+    line-height:1.2;
+  }
+  .header .subtitle{
+    font-size:14px;
+    margin-bottom:12px;
+  }
+  .header .meta{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+    font-size:13px;
+  }
+  .section{
+    padding:20px 16px;
+    border-radius:16px;
+    margin-bottom:16px;
+  }
+  h2{font-size:21px; margin-bottom:16px}
+  h3{font-size:18px; margin:24px 0 14px}
+  h4{font-size:16px}
+  p{font-size:13.5px; line-height:1.65}
+  
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin:18px 0 24px;
+  }
+  .stat-card{
+    padding:14px 8px;
+    border-radius:12px;
+  }
+  .stat-number{
+    font-size:28px;
+  }
+  .stat-icon{
+    font-size:24px;
+    margin-bottom:4px;
+  }
+  .stat-label{
+    font-size:11px;
+  }
+
+  .skill-label{
+    flex-wrap:wrap;
+    gap:4px;
+    font-size:13px;
+  }
+  .skill-level-badge{
+    font-size:10px;
+    padding:2px 6px;
+  }
+
+  .tech-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+  }
+  .tech-chip{
+    padding:10px 8px;
+  }
+  .tech-icon{
+    width:36px;
+    height:36px;
+    font-size:18px;
+  }
+
+  .terminal{
+    padding:14px;
+    border-radius:12px;
+  }
+  .terminal-body{
+    font-size:12px;
+    min-height:100px;
+    line-height:1.65;
+  }
+  
+  .project-body{
+    padding:16px;
+  }
+  .project-links{
+    gap:8px;
+  }
+  .project-link{
+    padding:8px 12px;
+    font-size:12px;
+  }
+
+  .timeline-item{
+    gap:12px;
+  }
+  .timeline-content{
+    padding:12px 14px;
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .cert-card{
+    padding:14px;
+    gap:12px;
+  }
+  .cert-icon{
+    width:42px;
+    height:42px;
+    min-width:42px;
+    font-size:20px;
+  }
+  
+  .language-card{
+    padding:14px;
+    gap:12px;
+  }
+  .lang-flag{
+    font-size:26px;
+    min-width:36px;
+  }
+  
+  .photo-area{
+    height:180px;
+  }
+  .photo-area img{
+    width:140px;
+    height:140px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header reveal">
+    <div class="language-switcher" role="group" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="es" aria-label="Español">🇪🇸 ES</button>
+      <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧 EN</button>
+      <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷 FR</button>
+    </div>
+    <h1>Imane El Harradji Aoury</h1>
+    <div class="subtitle" data-i18n="subtitle">Ingeniería Informática · Tecnología de la Información</div>
+    <div class="meta">
+      <span>✉️ <a href="mailto:imane.Elharradji@alu.uclm.es">imane.Elharradji@alu.uclm.es</a></span>
+      <span>📍 <span data-i18n="location">Ciudad Real, España</span></span>
+      <span>💼 <a href="https://linkedin.com/in/imanehrd" target="_blank" rel="noopener noreferrer">linkedin.com/in/imanehrd</a></span>
+      <span>🐙 <a href="https://github.com/imane-hrd" target="_blank" rel="noopener noreferrer">github.com/imane-hrd</a></span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <main>
+      <section class="section reveal">
+        <h2 data-i18n-html="aboutTitle">👤 Sobre mí</h2>
+        <p data-i18n="aboutText1">Me enfoco en resolver desafíos complejos de arquitectura de software y gestión de proyectos, con experiencia en el diseño de plataformas centradas en el usuario y la optimización del flujo de datos. 2º puesto en una competición de diseño de software con NTT DATA.</p>
+        <p data-i18n="aboutText2">Colaboro en el Área TIC de la UCLM. Conocimientos en Programación (C, C++, Java, Python), Tecnologías Web, Bases de Datos e Integración de Sistemas, con orientación a la seguridad defensiva (Cisco Cybersecurity Defense Analyst Career Path).</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label" data-i18n="statProjects">Proyectos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💻</div>
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label" data-i18n="statTech">Tecnologías</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label" data-i18n="statCerts">Certificaciones</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🌐</div>
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label" data-i18n="statLanguages">Idiomas</div>
+          </div>
+        </div>
+
+        <h3 data-i18n-html="skillsTitle">💻 Habilidades técnicas</h3>
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-label">
+              <span data-i18n="skill1Name">Lenguajes: C, C++, Java, Python, VB.net</span>
+              <span class="skill-level-badge" data-i18n="levelAdvanced">Avanzado</span>
+            </div>
+            <div class="skill-bar" data-width="85%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">
+              <span data-i18n="skill2Name">Tecnologías Web: HTML5, CSS3, JS, PHP, REST APIs</span>
+              <span class="skill-level-badge" data-i18n="levelAdvanced">Avanzado</span>
+            </div>
+            <div class="skill-bar" data-width="80%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">
+              <span data-i18n="skill3Name">Bases de Datos & Modelado: MySQL, Oracle, SQL, UML, Merise</span>
+              <span class="skill-level-badge" data-i18n="levelAdvanced">Avanzado</span>
+            </div>
+            <div class="skill-bar" data-width="80%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">
+              <span data-i18n="skill4Name">Ingeniería de Software: Arquitectura de Sistemas, Estructuras de Datos</span>
+              <span class="skill-level-badge" data-i18n="levelSolid">Sólido</span>
+            </div>
+            <div class="skill-bar" data-width="80%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">
+              <span data-i18n="skill5Name">Sistemas & Redes: Linux (Ubuntu), Redes, Integración de Sistemas</span>
+              <span class="skill-level-badge" data-i18n="levelSolid">Sólido</span>
+            </div>
+            <div class="skill-bar" data-width="75%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">
+              <span data-i18n="skill6Name">Ciberseguridad Defensiva: Cisco Defense Path, SIEM, Splunk</span>
+              <span class="skill-level-badge" data-i18n="levelCompetent">Competente</span>
+            </div>
+            <div class="skill-bar" data-width="72%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">
+              <span data-i18n="skill7Name">Game Dev & Multimedia: Godot Engine, 3D, Realidad Virtual (VR), UI/UX</span>
+              <span class="skill-level-badge" data-i18n="levelCompetent">Competente</span>
+            </div>
+            <div class="skill-bar" data-width="70%"></div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">
+              <span data-i18n="skill8Name">Tecnologías Emergentes: Machine Learning, AI, Big Data</span>
+              <span class="skill-level-badge" data-i18n="levelGrowing">En Crecimiento</span>
+            </div>
+            <div class="skill-bar" data-width="65%"></div>
+          </div>
+        </div>
+
+        <h3 data-i18n-html="projectsTitle">🚀 Proyectos destacados</h3>
+        <div class="projects">
+          <!-- Project 1 -->
+          <div class="project">
+            <div class="project-img" style="background-image:url('img/Edu.png')"></div>
+            <div class="project-body">
+              <h4 data-i18n="proj1Title">EduQuestVR</h4>
+              <p data-i18n="proj1Desc">Aplicación de escritorio educativa para estudiar de manera online en entornos 3D. Permite a los usuarios aprender diversos temas de forma interactiva e inmersiva utilizando tecnología de realidad virtual.</p>
+              <div class="project-tech">
+                <span class="tech-badge">Godot Engine</span>
+                <span class="tech-badge">3D</span>
+                <span class="tech-badge">VR</span>
+                <span class="tech-badge">Education</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/imane-hrd" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="btnCode">💻 Código</a>
+                <a href="#contact" class="project-link" data-i18n="btnDemo">🔗 Demo & Video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project">
+            <div class="project-img" style="background-image:url('img/iker.png')"></div>
+            <div class="project-body">
+              <h4 data-i18n="proj2Title">Sitio Web Asociación IKER</h4>
+              <p data-i18n="proj2Desc">Desarrollo completo de sitio web profesional para la asociación IKER, implementando SEO avanzado, gestión de cookies, responsive design y arquitectura web moderna.</p>
+              <div class="project-tech">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">WordPress</span>
+                <span class="tech-badge">SEO</span>
+                <span class="tech-badge">Cookies</span>
+              </div>
+              <div class="project-links">
+                <a href="https://asociacioniker.es" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="btnWeb">🌐 Sitio Web</a>
+                <a href="https://github.com/imane-hrd" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="btnCode">💻 Código</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project">
+            <div class="project-img" style="background-image:url('img/NTT.png')"></div>
+            <div class="project-body">
+              <h4 data-i18n="proj3Title">Aplicación Social - NTT DATA</h4>
+              <p data-i18n="proj3Desc">2º Puesto en competición de diseño con NTT DATA (Nov 2024). Diseño de arquitectura general, diagramas UML y plan técnico para una aplicación escalable de interacción social.</p>
+              <div class="project-tech">
+                <span class="tech-badge">UML</span>
+                <span class="tech-badge">Architecture</span>
+                <span class="tech-badge">Software Engineering</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link" data-i18n="btnArchitecture">📐 Arquitectura & Doc</a>
+                <a href="https://github.com/imane-hrd" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="btnDetails">📄 Detalles</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project">
+            <div class="project-img" style="background-image:url('img/terrain.jpg')"></div>
+            <div class="project-body">
+              <h4 data-i18n="proj4Title">App Móvil - Reserva de Fútbol</h4>
+              <p data-i18n="proj4Desc">Desarrollo con Python de una aplicación móvil para gestión y reserva de campos de fútbol, con sistema de usuarios, disponibilidad en tiempo real y base de datos MySQL.</p>
+              <div class="project-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Mobile</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">UI Design</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/imane-hrd" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="btnCode">💻 Código</a>
+                <a href="#contact" class="project-link" data-i18n="btnDetails">📱 Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project">
+            <div class="project-img" style="background-image:url('img/puerta.png')"></div>
+            <div class="project-body">
+              <h4 data-i18n="proj5Title">Puerta Automática RFID</h4>
+              <p data-i18n="proj5Desc">Desarrollo de sistema embebido de control de acceso automatizado mediante lectura de badges RFID, microcontrolador Arduino y programación en C++.</p>
+              <div class="project-tech">
+                <span class="tech-badge">Arduino</span>
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">RFID</span>
+                <span class="tech-badge">IoT</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/imane-hrd" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="btnCode">💻 Firmware C++</a>
+                <a href="#contact" class="project-link" data-i18n="btnDetails">⚡ Esquema IoT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h2 data-i18n-html="educationTitle">📚 Educación</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-line"></div>
+            <div class="timeline-content" data-i18n-html="edu1">
+              <strong>Sep 2022 – Jun 2026</strong> · Grado en Ingeniería Informática, Tecnología de la Información (IT) · Escuela Superior de Informática (ESI), Universidad de Castilla-La Mancha (UCLM), Ciudad Real.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-line"></div>
+            <div class="timeline-content" data-i18n-html="edu2">
+              <strong>Sep 2019 – Jun 2021</strong> · DUT Informática (Diplôme Universitaire de Technologie) · Université Hassan 1er, Marruecos.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <section class="section reveal">
+        <h4 data-i18n="photoTitle">📸 Foto de perfil</h4>
+        <div class="photo-area">
+          <img src="img/profile.png" alt="Imane El Harradji Aoury" onerror="this.style.display='none'; document.getElementById('photo-fallback').style.display='flex';">
+          <div id="photo-fallback" style="display:none; flex-direction:column; align-items:center; justify-content:center; gap:8px;">
+            <div style="width:96px; height:96px; border-radius:50%; background:var(--accent-gradient); display:flex; align-items:center; justify-content:center; color:white; font-size:36px; font-weight:700; font-family:Rajdhani,sans-serif; box-shadow:var(--shadow-md);">IE</div>
+            <span style="font-size:12px; color:var(--text-secondary); font-weight:600;">Imane El Harradji Aoury</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section terminal reveal">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <div class="terminal-dot dot-red" id="term-btn-red" title="Clear"></div>
+            <div class="terminal-dot dot-yellow" id="term-btn-yellow" title="Pause"></div>
+            <div class="terminal-dot dot-green" id="term-btn-green" title="Restart"></div>
+          </div>
+          <div class="terminal-title">imane@portfolio:~</div>
+        </div>
+        <div class="terminal-body" id="terminal"></div>
+      </section>
+
+      <section class="section reveal">
+        <h4 data-i18n="techTitle">🛠️ Entorno técnico</h4>
+        <p style="font-size:13px;margin-bottom:16px" data-i18n="techSubtitle">Tecnologías y herramientas</p>
+        <div class="tech-grid">
+          <div class="tech-chip">
+            <div class="tech-icon">🐧</div>
+            <div class="tech-label">Ubuntu</div>
+          </div>
+          <div class="tech-chip">
+            <div class="tech-icon">🐍</div>
+            <div class="tech-label">Python</div>
+          </div>
+          <div class="tech-chip">
+            <div class="tech-icon">☕</div>
+            <div class="tech-label">Java</div>
+          </div>
+          <div class="tech-chip">
+            <div class="tech-icon">💾</div>
+            <div class="tech-label">MySQL</div>
+          </div>
+          <div class="tech-chip">
+            <div class="tech-icon">🌐</div>
+            <div class="tech-label">Web Dev</div>
+          </div>
+          <div class="tech-chip">
+            <div class="tech-icon">📊</div>
+            <div class="tech-label">UML</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contact">
+        <h4 data-i18n="contactTitle">📞 Contacto</h4>
+        <p style="font-size:13px;margin-bottom:16px;text-align:center" data-i18n="contactSubtitle">¡Conectemos y trabajemos juntos!</p>
+        <div class="contact-grid">
+          <a href="mailto:imane.Elharradji@alu.uclm.es" class="btn">
+            <span>✉️</span> <span data-i18n="sendEmail">Enviar Email</span>
+          </a>
+          <a href="https://linkedin.com/in/imanehrd" target="_blank" rel="noopener noreferrer" class="btn">
+            <span>💼</span> <span data-i18n="viewLinkedIn">Ver LinkedIn</span>
+          </a>
+          <a href="https://github.com/imane-hrd" target="_blank" rel="noopener noreferrer" class="btn">
+            <span>🐙</span> <span data-i18n="viewGitHub">Ver GitHub</span>
+          </a>
+          <a href="CV/Imane_El_Harradji_Aoury_CV.pdf" download="Imane_El_Harradji_Aoury_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <span>📄</span> <span data-i18n="downloadCV">Descargar CV</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h4 data-i18n="languagesTitle">🌐 Idiomas</h4>
+        <div class="languages-grid">
+          <div class="language-card">
+            <div class="lang-flag">🇲🇦</div>
+            <div class="lang-info">
+              <div class="lang-name" data-i18n="langArabic">Árabe</div>
+              <div class="lang-level" data-i18n="langNative">Nativo</div>
+              <div class="lang-progress">
+                <div class="lang-progress-bar" style="width:100%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="language-card">
+            <div class="lang-flag">🇫🇷</div>
+            <div class="lang-info">
+              <div class="lang-name" data-i18n="langFrench">Francés</div>
+              <div class="lang-level" data-i18n="langFrenchLevel">Avanzado (C1/C2)</div>
+              <div class="lang-progress">
+                <div class="lang-progress-bar" style="width:92%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="language-card">
+            <div class="lang-flag">🇬🇧</div>
+            <div class="lang-info">
+              <div class="lang-name" data-i18n="langEnglish">Inglés</div>
+              <div class="lang-level" data-i18n="langEnglishLevel">Avanzado (B2/C1)</div>
+              <div class="lang-progress">
+                <div class="lang-progress-bar" style="width:85%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="language-card">
+            <div class="lang-flag">🇪🇸</div>
+            <div class="lang-info">
+              <div class="lang-name" data-i18n="langSpanish">Español</div>
+              <div class="lang-level" data-i18n="langSpanishLevel">Avanzado (B2/C1)</div>
+              <div class="lang-progress">
+                <div class="lang-progress-bar" style="width:88%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <h4 data-i18n="certificationsTitle">🏆 Certificaciones</h4>
+        <div class="certifications">
+          <div class="cert-card">
+            <div class="cert-icon">🛡️</div>
+            <div class="cert-content">
+              <h4 data-i18n="cert1Title">Cybersecurity Defense Analyst</h4>
+              <p class="cert-org">Cisco Networking Academy</p>
+              <p class="cert-date" data-i18n="cert1Date">Junio 2026 (En curso)</p>
+              <div class="cert-skills">
+                <span class="cert-tag">Splunk</span>
+                <span class="cert-tag">SIEM</span>
+                <span class="cert-tag">MITRE ATT&amp;CK</span>
+                <span class="cert-tag">Incident Response</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">🎓</div>
+            <div class="cert-content">
+              <h4 data-i18n="cert2Title">Software Engineer Certificate</h4>
+              <p class="cert-org">ALX Africa</p>
+              <p class="cert-date" data-i18n="cert2Date">Abril 2024</p>
+              <div class="cert-skills">
+                <span class="cert-tag">C</span>
+                <span class="cert-tag">Bash</span>
+                <span class="cert-tag">Git</span>
+                <span class="cert-tag">JavaScript</span>
+                <span class="cert-tag">Backend</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">🐍</div>
+            <div class="cert-content">
+              <h4 data-i18n="cert3Title">Crash Course on Python</h4>
+              <p class="cert-org">Google Operations Center</p>
+              <p class="cert-date" data-i18n="cert3Date">Junio 2022</p>
+              <div class="cert-skills">
+                <span class="cert-tag">Python</span>
+                <span class="cert-tag">Automation</span>
+                <span class="cert-tag">Scripts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon">☕</div>
+            <div class="cert-content">
+              <h4 data-i18n="cert4Title">Java Programming Masterclass</h4>
+              <p class="cert-org">Udemy</p>
+              <p class="cert-date" data-i18n="cert4Date">Junio 2021</p>
+              <div class="cert-skills">
+                <span class="cert-tag">Java</span>
+                <span class="cert-tag">JavaFX</span>
+                <span class="cert-tag">OOP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="footer" data-i18n="footerText">
+    Imane El Harradji Aoury · 2026 · Portfolio Ingeniera Informática
+  </footer>
+</div>
+
+<script>
+const translations = {
+  es: {
+    pageTitle: 'Imane El Harradji Aoury - Ingeniera Informática | Portfolio',
+    subtitle: 'Ingeniería Informática · Tecnología de la Información',
+    location: 'Ciudad Real, España',
+    aboutTitle: '👤 Sobre mí',
+    aboutText1: 'Me enfoco en resolver desafíos complejos de arquitectura de software y gestión de proyectos, con experiencia en el diseño de plataformas centradas en el usuario y la optimización del flujo de datos. 2º puesto en una competición de diseño de software con NTT DATA.',
+    aboutText2: 'Colaboro en el Área TIC de la UCLM. Conocimientos en Programación (C, C++, Java, Python), Tecnologías Web, Bases de Datos e Integración de Sistemas, con orientación a la seguridad defensiva (Cisco Cybersecurity Defense Analyst Career Path).',
+    statProjects: 'Proyectos',
+    statTech: 'Tecnologías',
+    statCerts: 'Certificaciones',
+    statLanguages: 'Idiomas',
+    skillsTitle: '💻 Habilidades técnicas',
+    skill1Name: 'Lenguajes: C, C++, Java, Python, VB.net',
+    skill2Name: 'Tecnologías Web: HTML5, CSS3, JS, PHP, REST APIs',
+    skill3Name: 'Bases de Datos & Modelado: MySQL, Oracle, SQL, UML, Merise',
+    skill4Name: 'Ingeniería de Software: Arquitectura de Sistemas, Estructuras de Datos',
+    skill5Name: 'Sistemas & Redes: Linux (Ubuntu), Redes, Integración de Sistemas',
+    skill6Name: 'Ciberseguridad Defensiva: Cisco Defense Path, SIEM, Splunk',
+    skill7Name: 'Game Dev & Multimedia: Godot Engine, 3D, Realidad Virtual (VR), UI/UX',
+    skill8Name: 'Tecnologías Emergentes: Machine Learning, AI, Big Data',
+    levelAdvanced: 'Avanzado',
+    levelSolid: 'Sólido',
+    levelCompetent: 'Competente',
+    levelGrowing: 'En Crecimiento',
+    projectsTitle: '🚀 Proyectos destacados',
+    proj1Title: 'EduQuestVR',
+    proj1Desc: 'Aplicación de escritorio educativa para estudiar de manera online en entornos 3D. Permite a los usuarios aprender diversos temas de forma interactiva e inmersiva utilizando tecnología de realidad virtual.',
+    proj2Title: 'Sitio Web Asociación IKER',
+    proj2Desc: 'Desarrollo completo de sitio web profesional para la asociación IKER, implementando SEO avanzado, gestión de cookies, responsive design y arquitectura web moderna.',
+    proj3Title: 'Aplicación Social - NTT DATA',
+    proj3Desc: '2º Puesto en competición de diseño con NTT DATA (Nov 2024). Diseño de arquitectura general, diagramas UML y plan técnico para una aplicación escalable de interacción social.',
+    proj4Title: 'App Móvil - Reserva de Fútbol',
+    proj4Desc: 'Desarrollo con Python de una aplicación móvil para gestión y reserva de campos de fútbol, con sistema de usuarios, disponibilidad en tiempo real y base de datos MySQL.',
+    proj5Title: 'Puerta Automática RFID',
+    proj5Desc: 'Desarrollo de sistema embebido de control de acceso automatizado mediante lectura de badges RFID, microcontrolador Arduino y programación en C++.',
+    btnCode: '💻 Código',
+    btnDemo: '🔗 Demo & Video',
+    btnWeb: '🌐 Sitio Web',
+    btnArchitecture: '📐 Arquitectura & Doc',
+    btnDetails: '📄 Detalles',
+    educationTitle: '📚 Educación',
+    edu1: '<strong>Sep 2022 – Jun 2026</strong> · Grado en Ingeniería Informática, Tecnología de la Información (IT) · Escuela Superior de Informática (ESI), Universidad de Castilla-La Mancha (UCLM), Ciudad Real.',
+    edu2: '<strong>Sep 2019 – Jun 2021</strong> · DUT Informática (Diplôme Universitaire de Technologie) · Université Hassan 1er, Marruecos.',
+    photoTitle: '📸 Foto de perfil',
+    techTitle: '🛠️ Entorno técnico',
+    techSubtitle: 'Tecnologías y herramientas',
+    contactTitle: '📞 Contacto',
+    contactSubtitle: '¡Conectemos y trabajemos juntos!',
+    sendEmail: 'Enviar Email',
+    viewLinkedIn: 'Ver LinkedIn',
+    viewGitHub: 'Ver GitHub',
+    downloadCV: 'Descargar CV',
+    languagesTitle: '🌐 Idiomas',
+    langArabic: 'Árabe',
+    langFrench: 'Francés',
+    langEnglish: 'Inglés',
+    langSpanish: 'Español',
+    langNative: 'Nativo',
+    langFrenchLevel: 'Avanzado (C1/C2)',
+    langEnglishLevel: 'Avanzado (B2/C1)',
+    langSpanishLevel: 'Avanzado (B2/C1)',
+    certificationsTitle: '🏆 Certificaciones',
+    cert1Title: 'Cybersecurity Defense Analyst',
+    cert1Date: 'Junio 2026 (En curso)',
+    cert2Title: 'Software Engineer Certificate',
+    cert2Date: 'Abril 2024',
+    cert3Title: 'Crash Course on Python',
+    cert3Date: 'Junio 2022',
+    cert4Title: 'Java Programming Masterclass',
+    cert4Date: 'Junio 2021',
+    footerText: 'Imane El Harradji Aoury · 2026 · Portfolio Ingeniera Informática'
+  },
+  en: {
+    pageTitle: 'Imane El Harradji Aoury - Software Engineer | Portfolio',
+    subtitle: 'Computer Engineering · Information Technology',
+    location: 'Ciudad Real, Spain',
+    aboutTitle: '👤 About Me',
+    aboutText1: 'I focus on solving complex software architecture and project management challenges, with experience designing user-centered platforms and optimizing data flows. 2nd place award in NTT DATA software design competition.',
+    aboutText2: 'Collaborating with the IT Department (Área TIC) at UCLM. Core skills in Programming (C, C++, Java, Python), Web Technologies, Databases, and Systems Integration, with defensive security expertise (Cisco Cybersecurity Defense Analyst Career Path).',
+    statProjects: 'Projects',
+    statTech: 'Technologies',
+    statCerts: 'Certifications',
+    statLanguages: 'Languages',
+    skillsTitle: '💻 Technical Skills',
+    skill1Name: 'Languages: C, C++, Java, Python, VB.net',
+    skill2Name: 'Web Technologies: HTML5, CSS3, JS, PHP, REST APIs',
+    skill3Name: 'Databases & Modeling: MySQL, Oracle, SQL, UML, Merise',
+    skill4Name: 'Software Engineering: System Architecture, Data Structures',
+    skill5Name: 'Systems & Networking: Linux (Ubuntu), Networks, Integration',
+    skill6Name: 'Defensive Cybersecurity: Cisco Defense Path, SIEM, Splunk',
+    skill7Name: 'Game Dev & Multimedia: Godot Engine, 3D, Virtual Reality (VR), UI/UX',
+    skill8Name: 'Emerging Tech: Machine Learning, AI, Big Data',
+    levelAdvanced: 'Advanced',
+    levelSolid: 'Proficient',
+    levelCompetent: 'Competent',
+    levelGrowing: 'Growing',
+    projectsTitle: '🚀 Featured Projects',
+    proj1Title: 'EduQuestVR',
+    proj1Desc: 'Educational desktop application for online learning in 3D environments. Allows users to explore diverse subjects interactively and immersively using VR technology.',
+    proj2Title: 'IKER Association Website',
+    proj2Desc: 'End-to-end development of a professional website for the IKER Association, featuring advanced SEO, cookie compliance, responsive design, and modern architecture.',
+    proj3Title: 'Social Platform - NTT DATA',
+    proj3Desc: '2nd Place NTT DATA Software Design Competition (Nov 2024). Software architecture design, UML modeling, and technical specification for a scalable social platform.',
+    proj4Title: 'Mobile App - Pitch Booking',
+    proj4Desc: 'Mobile app built with Python for booking and managing football pitches, featuring user accounts, real-time availability, and MySQL database integration.',
+    proj5Title: 'RFID Automatic Door System',
+    proj5Desc: 'Embedded automated access control system using RFID badge scanning, Arduino microcontroller, and C++ firmware programming.',
+    btnCode: '💻 Code',
+    btnDemo: '🔗 Demo & Video',
+    btnWeb: '🌐 Live Website',
+    btnArchitecture: '📐 Architecture & Docs',
+    btnDetails: '📄 Details',
+    educationTitle: '📚 Education',
+    edu1: '<strong>Sep 2022 – Jun 2026</strong> · B.S. in Computer Engineering, Information Technology (IT) · Higher School of Computer Science (ESI), University of Castilla-La Mancha (UCLM), Ciudad Real, Spain.',
+    edu2: '<strong>Sep 2019 – Jun 2021</strong> · DUT in Computer Science (University Diploma of Technology) · Hassan 1st University, Morocco.',
+    photoTitle: '📸 Profile Photo',
+    techTitle: '🛠️ Technical Stack',
+    techSubtitle: 'Technologies and tools',
+    contactTitle: '📞 Contact',
+    contactSubtitle: "Let's connect and work together!",
+    sendEmail: 'Send Email',
+    viewLinkedIn: 'View LinkedIn',
+    viewGitHub: 'View GitHub',
+    downloadCV: 'Download CV',
+    languagesTitle: '🌐 Languages',
+    langArabic: 'Arabic',
+    langFrench: 'French',
+    langEnglish: 'English',
+    langSpanish: 'Spanish',
+    langNative: 'Native',
+    langFrenchLevel: 'Fluent (C1/C2)',
+    langEnglishLevel: 'Advanced (B2/C1)',
+    langSpanishLevel: 'Advanced (B2/C1)',
+    certificationsTitle: '🏆 Certifications',
+    cert1Title: 'Cybersecurity Defense Analyst',
+    cert1Date: 'June 2026 (In progress)',
+    cert2Title: 'Software Engineer Certificate',
+    cert2Date: 'April 2024',
+    cert3Title: 'Crash Course on Python',
+    cert3Date: 'June 2022',
+    cert4Title: 'Java Programming Masterclass',
+    cert4Date: 'June 2021',
+    footerText: 'Imane El Harradji Aoury · 2026 · Computer Engineer Portfolio'
+  },
+  fr: {
+    pageTitle: 'Imane El Harradji Aoury - Ingénieure Informatique | Portfolio',
+    subtitle: "Ingénierie Informatique · Technologie de l'Information",
+    location: 'Ciudad Real, Espagne',
+    aboutTitle: '👤 À propos de moi',
+    aboutText1: "Je me concentre sur la résolution de défis complexes en architecture logicielle et en gestion de projets, avec une solide expérience dans la conception de plateformes centrées utilisateur et l'optimisation des flux de données. 2e place au concours NTT DATA.",
+    aboutText2: "Je collabore au service informatique (Área TIC) de l'UCLM. Compétences en Programmation (C, C++, Java, Python), Technologies Web, Bases de données et Intégration de systèmes, avec orientation cybersécurité défensive (Cisco Cybersecurity Defense Analyst).",
+    statProjects: 'Projets',
+    statTech: 'Technologies',
+    statCerts: 'Certifications',
+    statLanguages: 'Langues',
+    skillsTitle: '💻 Compétences techniques',
+    skill1Name: 'Langages : C, C++, Java, Python, VB.net',
+    skill2Name: 'Technologies Web : HTML5, CSS3, JS, PHP, REST APIs',
+    skill3Name: 'Bases de données & Modélisation : MySQL, Oracle, SQL, UML, Merise',
+    skill4Name: 'Génie Logiciel : Architecture Systèmes, Structures de Données',
+    skill5Name: 'Systèmes & Réseaux : Linux (Ubuntu), Réseaux, Intégration',
+    skill6Name: 'Cybersécurité Défensive : Cisco Defense Path, SIEM, Splunk',
+    skill7Name: 'Game Dev & Multimédia : Godot Engine, 3D, Réalité Virtuelle (VR), UI/UX',
+    skill8Name: 'Technologies Émergentes : Machine Learning, IA, Big Data',
+    levelAdvanced: 'Avancé',
+    levelSolid: 'Solide',
+    levelCompetent: 'Compétent',
+    levelGrowing: 'En Apprentissage',
+    projectsTitle: '🚀 Projets phares',
+    proj1Title: 'EduQuestVR',
+    proj1Desc: "Application de bureau éducative pour étudier en ligne dans des environnements 3D immersifs et interactifs grâce à la réalité virtuelle.",
+    proj2Title: 'Site Web Association IKER',
+    proj2Desc: "Développement complet du site web professionnel de l'association IKER : SEO avancé, conformité cookies, responsive design et architecture moderne.",
+    proj3Title: 'Application Sociale - NTT DATA',
+    proj3Desc: '2e Place au concours de conception NTT DATA (Nov 2024). Conception d’architecture logicielle, modélisation UML et spécifications techniques.',
+    proj4Title: 'App Mobile - Réservation Terrains',
+    proj4Desc: 'Application mobile en Python pour la gestion et réservation de terrains de football, avec gestion des utilisateurs et base de données MySQL.',
+    proj5Title: 'Contrôle d’Accès RFID',
+    proj5Desc: 'Système embarqué de contrôle d’accès automatisé par lecture de badges RFID, microcontrôleur Arduino et programmation C++.',
+    btnCode: '💻 Code',
+    btnDemo: '🔗 Démo & Vidéo',
+    btnWeb: '🌐 Site Web',
+    btnArchitecture: '📐 Architecture & Doc',
+    btnDetails: '📄 Détails',
+    educationTitle: '📚 Formation',
+    edu1: "<strong>Sep 2022 – Juin 2026</strong> · Diplôme d'Ingénieur en Informatique (IT) · École Supérieure d'Informatique (ESI), Université de Castille-La Manche (UCLM), Ciudad Real, Espagne.",
+    edu2: '<strong>Sep 2019 – Juin 2021</strong> · DUT Informatique (Diplôme Universitaire de Technologie) · Université Hassan 1er, Maroc.',
+    photoTitle: '📸 Photo de profil',
+    techTitle: '🛠️ Environnement technique',
+    techSubtitle: 'Technologies et outils',
+    contactTitle: '📞 Contact',
+    contactSubtitle: 'Connectons-nous et collaborons !',
+    sendEmail: 'Envoyer Email',
+    viewLinkedIn: 'Voir LinkedIn',
+    viewGitHub: 'Voir GitHub',
+    downloadCV: 'Télécharger CV',
+    languagesTitle: '🌐 Langues',
+    langArabic: 'Arabe',
+    langFrench: 'Français',
+    langEnglish: 'Anglais',
+    langSpanish: 'Espagnol',
+    langNative: 'Natif',
+    langFrenchLevel: 'Courant (C1/C2)',
+    langEnglishLevel: 'Avancé (B2/C1)',
+    langSpanishLevel: 'Avancé (B2/C1)',
+    certificationsTitle: '🏆 Certifications',
+    cert1Title: 'Cybersecurity Defense Analyst',
+    cert1Date: 'Juin 2026 (En cours)',
+    cert2Title: 'Software Engineer Certificate',
+    cert2Date: 'Avril 2024',
+    cert3Title: 'Crash Course on Python',
+    cert3Date: 'Juin 2022',
+    cert4Title: 'Java Programming Masterclass',
+    cert4Date: 'Juin 2021',
+    footerText: 'Imane El Harradji Aoury · 2026 · Portfolio Ingénieure Informatique'
+  }
+};
+
+const terminalScripts = {
+  es: [
+    {type:'command',text:'whoami'},
+    {type:'text',text:'Imane El Harradji Aoury'},
+    {type:'text',text:'Estudiante de Ingeniería Informática (ESI - UCLM)'},
+    {type:'command',text:'cat skills.txt'},
+    {type:'success',text:'→ Arquitectura de Software & Gestión TIC'},
+    {type:'success',text:'→ Desarrollo Backend, C/C++, Java & Python'},
+    {type:'success',text:'→ Ciberseguridad Defensiva & Redes'},
+    {type:'command',text:'echo $NTT_DATA_AWARD'},
+    {type:'output',text:'🏆 2º Puesto Competición NTT DATA (Nov 2024)'},
+    {type:'command',text:'status'},
+    {type:'text',text:'🎯 Abierta a nuevas oportunidades de prácticas / empleo'},
+    {type:'text',text:'📍 Ciudad Real, España'}
+  ],
+  en: [
+    {type:'command',text:'whoami'},
+    {type:'text',text:'Imane El Harradji Aoury'},
+    {type:'text',text:'Computer Engineering Student (ESI - UCLM)'},
+    {type:'command',text:'cat skills.txt'},
+    {type:'success',text:'→ Software Architecture & IT Management'},
+    {type:'success',text:'→ Backend Development, C/C++, Java & Python'},
+    {type:'success',text:'→ Defensive Cybersecurity & Networking'},
+    {type:'command',text:'echo $NTT_DATA_AWARD'},
+    {type:'output',text:'🏆 2nd Place NTT DATA Software Contest (Nov 2024)'},
+    {type:'command',text:'status'},
+    {type:'text',text:'🎯 Open to internship & junior engineer opportunities'},
+    {type:'text',text:'📍 Ciudad Real, Spain'}
+  ],
+  fr: [
+    {type:'command',text:'whoami'},
+    {type:'text',text:'Imane El Harradji Aoury'},
+    {type:'text',text:'Étudiante en Ingénierie Informatique (ESI - UCLM)'},
+    {type:'command',text:'cat skills.txt'},
+    {type:'success',text:'→ Architecture Logicielle & Gestion TIC'},
+    {type:'success',text:'→ Développement Backend, C/C++, Java & Python'},
+    {type:'success',text:'→ Cybersécurité Défensive & Réseaux'},
+    {type:'command',text:'echo $NTT_DATA_AWARD'},
+    {type:'output',text:'🏆 2e Place Concours NTT DATA (Nov 2024)'},
+    {type:'command',text:'status'},
+    {type:'text',text:"🎯 À la recherche d'opportunités de stage / emploi"},
+    {type:'text',text:'📍 Ciudad Real, Espagne'}
+  ]
+};
+
+let currentLang = 'es';
+let terminalTimeout = null;
+
+function renderTerminal(lang) {
+  const el = document.getElementById('terminal');
+  if (!el) return;
+  if (terminalTimeout) clearTimeout(terminalTimeout);
+  el.innerHTML = '';
+  
+  const lines = terminalScripts[lang] || terminalScripts.es;
+  let lineIdx = 0;
+  let charIdx = 0;
+  
+  function typeChar() {
+    if (lineIdx >= lines.length) {
+      el.innerHTML += '<span class="terminal-cursor"></span>';
+      return;
+    }
+    
+    const cur = lines[lineIdx];
+    const full = cur.text;
+    
+    const renderedPrev = lines.slice(0, lineIdx).map(l => {
+      if (l.type === 'command') return `<span class="terminal-line"><span class="terminal-prompt">$ </span>${l.text}</span>`;
+      if (l.type === 'success') return `<span class="terminal-line"><span class="terminal-success">${l.text}</span></span>`;
+      if (l.type === 'output') return `<span class="terminal-line"><span class="terminal-text" style="color:#60a5fa;">${l.text}</span></span>`;
+      return `<span class="terminal-line"><span class="terminal-text">${l.text}</span></span>`;
+    }).join('');
+    
+    const partial = full.slice(0, charIdx + 1);
+    let curHtml = '';
+    if (cur.type === 'command') {
+      curHtml = `<span class="terminal-line"><span class="terminal-prompt">$ </span>${partial}</span>`;
+    } else if (cur.type === 'success') {
+      curHtml = `<span class="terminal-line"><span class="terminal-success">${partial}</span></span>`;
+    } else if (cur.type === 'output') {
+      curHtml = `<span class="terminal-line"><span class="terminal-text" style="color:#60a5fa;">${partial}</span></span>`;
+    } else {
+      curHtml = `<span class="terminal-line"><span class="terminal-text">${partial}</span></span>`;
+    }
+    
+    el.innerHTML = renderedPrev + curHtml + '<span class="terminal-cursor"></span>';
+    
+    if (charIdx < full.length - 1) {
+      charIdx++;
+      terminalTimeout = setTimeout(typeChar, cur.type === 'command' ? 60 : 25);
+    } else {
+      lineIdx++;
+      charIdx = 0;
+      terminalTimeout = setTimeout(typeChar, cur.type === 'command' ? 500 : 200);
+    }
+  }
+  
+  terminalTimeout = setTimeout(typeChar, 400);
+}
+
+function changeLanguage(lang) {
+  if (!translations[lang]) return;
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  
+  const langButtons = document.querySelectorAll('.lang-btn');
+  langButtons.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  
+  const t = translations[lang];
+  if (t.pageTitle) document.title = t.pageTitle;
+  
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) {
+      el.textContent = t[key];
+    }
+  });
+  
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key];
+    }
+  });
+  
+  renderTerminal(lang);
+}
+
+// Initialize language switcher
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    changeLanguage(btn.dataset.lang);
+  });
+});
+
+// Terminal header dots controls
+document.getElementById('term-btn-red')?.addEventListener('click', () => {
+  if (terminalTimeout) clearTimeout(terminalTimeout);
+  const el = document.getElementById('terminal');
+  if (el) el.innerHTML = '<span class="terminal-line"><span class="terminal-prompt">$ </span>clear</span><span class="terminal-cursor"></span>';
+});
+
+document.getElementById('term-btn-yellow')?.addEventListener('click', () => {
+  if (terminalTimeout) clearTimeout(terminalTimeout);
+});
+
+document.getElementById('term-btn-green')?.addEventListener('click', () => {
+  renderTerminal(currentLang);
+});
+
+// Stats counter with IntersectionObserver
+(function(){
+  const stats = document.querySelectorAll('.stat-number');
+  
+  function animateCounter(stat){
+    const target = parseInt(stat.dataset.target, 10);
+    const duration = 1600;
+    const increment = target / (duration / 16);
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        stat.textContent = target + '+';
+        clearInterval(timer);
+      } else {
+        stat.textContent = Math.floor(current);
+      }
+    }, 16);
+  }
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.4});
+  
+  stats.forEach(stat => observer.observe(stat));
+})();
+
+// Skill bars with IntersectionObserver
+(function(){
+  const bars = document.querySelectorAll('.skill-bar');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.setProperty('--width', e.target.dataset.width);
+        e.target.classList.add('active');
+        obs.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.3});
+  bars.forEach(b => obs.observe(b));
+})();
+
+// Safe smooth scrolling (fixes querySelector('#') crash)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (!href || href === '#') {
+      e.preventDefault();
+      return;
+    }
+    try {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } catch(err) {
+      console.warn('Invalid selector:', href);
+    }
+  });
+});
+
+// Initial terminal render
+renderTerminal(currentLang);
+</script>
+</body>
+</html>
